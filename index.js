@@ -1,12 +1,11 @@
-// 
-
 
 require('dotenv').config()
 const express = require('express')
 const http = require('http')
 const app = express()
 const server = http.createServer(app)
-const PORT = 3000//process.env.PORT
+const path = require('path');
+const PORT = 3050//process.env.PORT
 
 const startServer = async () => {
     app.get('/', (req, res) => {
@@ -14,11 +13,13 @@ const startServer = async () => {
     })
     app.get('/api/data', (req, res) => {
         const data = {
-          message: 'This is some data from the API route.',
-          timestamp: new Date().toISOString()
+            message: 'This is some data from the API route.',
+            timestamp: new Date().toISOString()
         };
         res.json(data);
-      });
+    });
+
+    app.use(express.static(path.join(__dirname, 'public')));
 
     server.listen(PORT, () => {
         console.log(`User service is running on port : ${PORT}`)
