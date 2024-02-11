@@ -8,18 +8,20 @@ const path = require('path');
 const PORT = 3050//process.env.PORT
 
 const startServer = async () => {
-    app.get('/', (req, res) => {
-        res.send('Hello, world! This is the index page.');
+    app.set('view engine', 'ejs');
+    app.use(express.static(path.join(__dirname, 'public')));
+
+    app.get('/home', (req, res) => {
+        res.render('index');
     })
-    app.get('/api/data', (req, res) => {
-        const data = {
-            message: 'This is some data from the API route.',
-            timestamp: new Date().toISOString()
-        };
-        res.json(data);
+
+    app.get('/faq', async (req, res, next) => {
+        return res.render('faq')
     });
 
-    app.use(express.static(path.join(__dirname, 'public')));
+    app.get('/privacy&policy', async (req, res, next) => {
+        return res.render('privacy&policy')
+    });
 
     server.listen(PORT, () => {
         console.log(`User service is running on port : ${PORT}`)

@@ -1,0 +1,163 @@
+.hero-section .content {
+  margin-inline: auto;
+  padding-block: 5rem;
+  text-align: center;
+  max-width: 60rem;
+  min-height: calc(100vh - 4rem);
+}
+
+.hero-section .content .app-icon {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  margin-inline: auto;
+  box-shadow: 0.05rem 0.05rem 0.25rem var(--color-outline);
+}
+
+.hero-section .content .app-name {
+  color: var(--color-accent);
+  display: inline-block;
+  margin-block: 1rem;
+}
+
+.hero-section .content .hero-title {
+  line-height: 1.25em;
+  margin-bottom: 1rem;
+}
+
+.hero-section .content .hero-description {
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+
+.hero-section .content .download-badge {
+  display: inline-block;
+}
+
+.hero-section .content .download-badge:hover {
+  opacity: 0.75;
+}
+
+.hero-section .content .download-badge img {
+  height: 3rem;
+}
+
+footer {
+  background-color: var(--color-background-secondary);
+  border-top: 1px solid var(--color-outline);
+}
+
+footer .content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  column-gap: 1rem;
+  height: 4rem;
+}
+footer .content span {
+  flex-grow: 1;
+  color: var(--color-text-primary);
+}
+footer .content .quick-links {
+  margin-block: 0.5rem;
+}
+
+footer .content a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+  margin-inline: 1rem;
+  font-weight: 600;
+}
+
+footer .content a:hover {
+  text-decoration: underline;
+}
+
+.main-section .content,
+.faq-section .content {
+  margin-inline: auto;
+  padding-block: 5rem;
+  max-width: 60rem;
+  min-height: calc(100vh - 4rem);
+  color: var(--color-text-secondary);
+}
+.main-section .content img,
+.faq-section .content img {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+}
+.main-section .content h2,
+.main-section .content h5,
+.faq-section .content h3 {
+  margin-bottom: 0.5rem;
+  color: var(--color-text-primary);
+}
+
+.main-section .content .micro-section {
+  margin-top: 2rem;
+}
+
+#searchInput {
+  width: 100%;
+  max-width: 30rem;
+  display: block;
+  margin-inline: auto;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-background-secondary);
+  border-radius: 2rem;
+  outline-color: var(--color-accent);
+  appearance: unset;
+  border: 1px solid var(--color-outline);
+}
+
+#contentList {
+  padding-block: 2rem;
+  color: var(--color-text-primary);
+}
+
+#contentList details {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-background-secondary);
+}
+
+#contentList summary {
+  cursor: pointer;
+}
+
+#contentList details div {
+  padding: 0.5rem 1rem;
+}
+
+.faq-section .content h3 {
+  text-align: center;
+}
+
+.faq-section .content img {
+  display: block;
+  margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+}
+
+@media (min-width: 768px) {
+  footer .content {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section .content .download-badge img {
+    height: 3.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+}
+
+@media (min-width: 1536px) {
+}
